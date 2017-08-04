@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/">home</a>
+<a href="/customers">customers</a>
+<a href="/add_customer">add customers</a>
+<h1>customer page</h1>
+<div th:each="customer: ${customers}" >
+
+
+<ul>
+    <li>
+        <a th:href="@{${customer.id}}"><p> id: <span th:text="${customer.id}" ></span></p></a>
+        <p>first name: <span  th:text="${customer.firstname}" ></span></p>
+        <p> last name: <span th:text="${customer.lastname}" ></span></p>
+        <p> number: <span th:text="${customer.phone}" ></span></p>
+        <p> email: <span th:text="${customer.email}" ></span></p>
+    </li>
+</ul>
+</div>
+</body>
+</html>
