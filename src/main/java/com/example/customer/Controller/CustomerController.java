@@ -2,11 +2,8 @@ package com.example.customer.Controller;
 
 
 
-import com.example.customer.Repository.CustomerRepository;
-import com.example.customer.Repository.CustomerRepositoryImpl;
 import com.example.customer.model.Customer;
 import com.example.customer.service.CustomerService;
-import com.example.customer.service.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

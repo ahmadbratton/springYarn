@@ -1,5 +1,9 @@
 package com.example.customer.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "customer")
 public class Customer {
     int id;
     String firstname;
@@ -10,6 +14,8 @@ public class Customer {
     public Customer() {
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -18,6 +24,7 @@ public class Customer {
         this.id = id;
     }
 
+    @Column(name = "firstname")
     public String getFirstname() {
         return firstname;
     }
@@ -26,6 +33,7 @@ public class Customer {
         this.firstname = firstname;
     }
 
+    @Column(name = "lastname")
     public String getLastname() {
         return lastname;
     }
@@ -34,6 +42,7 @@ public class Customer {
         this.lastname = lastname;
     }
 
+    @Column(name = "phone")
     public String getPhone() {
         return phone;
     }
@@ -42,6 +51,7 @@ public class Customer {
         this.phone = phone;
     }
 
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -60,4 +70,5 @@ public class Customer {
                 ", phone='" + phone + '\'' +
                 '}';
     }
+
 }
